@@ -32,6 +32,11 @@ It is a simple script for the [GRUB2](https://www.gnu.org/software/grub/grub-doc
 
 In order to install [ISO images](https://en.wikipedia.org/wiki/ISO_image) just copy them to the `/boot/images` directory on the USB flash drive. You can make nested directories in the `/boot/images` directory.
 
+### Installation UEFI applications
+
+In order to install UEFI applications (like [rEFInd](https://www.rodsbooks.com/refind/) or [EFI version of GPT fdisk](https://sourceforge.net/p/gptfdisk/code/ci/master/tree/README-efi.txt)) copy them to the `/boot/applications` directory on the USB flash drive. You can make nested directories in the `/boot/applications` directory.
+
+
 ### Installation Windows images
 
 The GRUB2 can boot the Windows Boot Manager. Windows Boot Manager can boot the Windows from [WIM](https://en.wikipedia.org/wiki/Windows_Imaging_Format) or [VHD](https://en.wikipedia.org/wiki/VHD_(file_format)) images. You can find the Windows Boot Manager in the Windows installation CD or download one from the Microsoft website as part of [Windows PE](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-intro). Consider the installation and configuration the Windows Boot Manager to the USB flash drive on the example of Windows PE.
@@ -45,6 +50,12 @@ C:\>copy <windows_pe_directory>\EFI\Boot\bootx64.efi <usb_drive_mount_point>\boo
 ```
 
 Optionally you can copy language files.
+
+---
+
+You can copy the `bootx64.efi` file instead the directory `/boot/windows/EFI/Boot` to the directory `/boot/applications` on the USB flash drive and rename one.
+
+---
 
 Also you can copy the ramdisk file `boot.sdi` to the common directory (for example `boot/windows/Boot`) on the USB flash drive because multiple Windows images can use one shared ramdisk file:
 
