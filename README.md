@@ -30,7 +30,7 @@ It is a simple script for the [GRUB2](https://www.gnu.org/software/grub/grub-doc
 
 ### Installation ISO images
 
-In order to install [ISO images](https://en.wikipedia.org/wiki/ISO_image) just copy them to the `/boot/iso` directory on the USB flash drive.
+In order to install [ISO images](https://en.wikipedia.org/wiki/ISO_image) just copy them to the `/boot/iso` directory on the USB flash drive. You can make nested directories in the `/boot/iso` directory.
 
 ### Installation Windows images
 
