@@ -166,3 +166,10 @@ In order to add a new Windows image file to the USB flash drive copy one into `b
 BCD file is a Windows registry hive. So you can edit one on the Linux using the `hivex` program or any other Windows registry editor. [BcdLibraryElementTypes enumeration](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/bcd/bcdlibraryelementtypes) article describes element names of BCD objects.
 
 ---
+
+---
+
+Since the amd64 version of Windows PE does not contain the WOW64 subsystem, it can't run 32-bit applications.
+You can add both amd64 and x86 versions of Windows PE to the USB flash drive and add appropriate boot entries to BCD files.
+
+---
