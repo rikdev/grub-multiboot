@@ -36,8 +36,9 @@ In order to install [ISO images](https://en.wikipedia.org/wiki/ISO_image) just c
 
 In order to install UEFI applications (like [rEFInd](https://www.rodsbooks.com/refind/) or [EFI version of GPT fdisk](https://sourceforge.net/p/gptfdisk/code/ci/master/tree/README-efi.txt)) copy them to the `/boot/applications` directory on the USB flash drive. You can make nested directories in the `/boot/applications` directory.
 
-
 ### Installation Windows images
+
+#### Manually
 
 The GRUB2 can boot the Windows Boot Manager. Windows Boot Manager can boot the Windows from [WIM](https://en.wikipedia.org/wiki/Windows_Imaging_Format) or [VHD](https://en.wikipedia.org/wiki/VHD_(file_format)) images. You can find the Windows Boot Manager in the Windows installation CD or download one from the Microsoft website as part of [Windows PE](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-intro). Consider the installation and configuration the Windows Boot Manager to the USB flash drive on the example of Windows PE.
 
@@ -173,3 +174,7 @@ Since the amd64 version of Windows PE does not contain the WOW64 subsystem, it c
 You can add both amd64 and x86 versions of Windows PE to the USB flash drive and add appropriate boot entries to BCD files.
 
 ---
+
+#### Script
+
+You can install Windows PE using the "scripts/Install-WindowsPE.ps1" script.
